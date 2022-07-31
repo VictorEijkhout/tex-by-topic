@@ -2,7 +2,7 @@ info ::
 	@echo "make onepass pdf"
 .PHONY: onepass pdf
 onepass :
-	pdflatex TeXbyTopic
+	TEXINPUTS=./incs:./figs:${TEXINPUTS} pdflatex TeXbyTopic
 pdf :
 	make bib
 	make onepass
@@ -11,7 +11,7 @@ pdf :
 	makeindex TeXbyTopic
 	make onepass
 	if [ "`whoami`" = "eijkhout" ] ; then \
-	  cp TeXbyTopic.pdf ${HOME}/DropBox/SciComp ; \
+	  cp TeXbyTopic.pdf ${HOME}/DropBox/SciComp/TeX ; \
 	fi
 
 info ::
