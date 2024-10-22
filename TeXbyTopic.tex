@@ -6430,14 +6430,12 @@ corresponding to the horizontal mode in which it appeared.
 
 A general leader command looks like
 \begin{Disp} \gr{leaders}\gr{box or rule}%
-      \gr{vertical/horizontal/mathematical skip}\end{Disp}
+      \gr{vertical/horizontal skip}\end{Disp}
 where \gr{leaders} is \cs{leaders}, \cs{cleaders}, 
 or~\cs{xleaders}, a \gr{box~or~rule}
 is a~\gr{box}, \cs{vrule}, or~\cs{hrule}, and the
-lists of horizontal and vertical skips appear in Chapter~\ref{hvmode};
-a~mathematical skip is either a horizontal skip or an~\cs{mskip}
-(see page~\pageref{muglue}).
-Leaders can thus be used in all three modes. Of course, the
+lists of horizontal and vertical skips appear in Chapter~\ref{hvmode}.
+Leaders can be used in all three modes. However, the
 appropriate kind of skip must be specified. 
 
 A horizontal (vertical) box containing leaders has at least
@@ -14125,7 +14123,7 @@ See also page~\pageref{mcode:8000}.
 Admissible glue in math mode is of type~\gr{mathematical skip},
 which is either a \gr{horizontal skip} (see Chapter~\ref{hvmode}) 
 or~\cs{mskip}\gr{muglue}. Leaders in math mode can be specified
-with a \gr{mathematical skip}.
+with a \gr{horizontal skip}.
 
 A glue item preceded by \csterm{nonscript}
 is cancelled if it occurs in scriptstyle or scriptscriptstyle.
